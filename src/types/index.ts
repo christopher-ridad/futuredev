@@ -46,19 +46,12 @@ export type BuildPath = {
   relatedProjectIds: string[];
 };
 
-export type LearningStage = {
-  title: string;
-  description: string;
-  skills: string[];
-  resources: BuildPathResource[];
-  practiceProjectIdeas: string[];
-};
-
-export type LearningPath = {
-  id: BuildCategory;
-  title: string;
-  description: string;
-  stages: LearningStage[];
+export type ArchivedMentor = {
+  name: string;
+  track: BuildCategory;
+  seasons: string[];
+  // Link to the mentor's real curriculum outline, when available.
+  outlineUrl?: string;
 };
 
 export type TeamMember = {

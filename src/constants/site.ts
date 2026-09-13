@@ -13,8 +13,9 @@ export const mainNavLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "/#about" },
   { label: "Programs", href: "/#get-started" },
+  { label: "Apply", href: "/#mentorship" },
   { label: "Team", href: "/#team" },
-  { label: "Resources", href: "/resources" },
+  { label: "Mentors", href: "/mentors" },
   { label: "FAQ", href: "/#faq" },
 ] as const;
 
@@ -22,4 +23,10 @@ export const externalLinks = {
   discord: "https://discord.gg/hKTTRRVbHb",
   instagram: "https://www.instagram.com/nufuturedev",
   linktree: "https://linktr.ee/nufuturedev",
+  // Mentor Interest Form, Fall 2026.
+  mentorApplication:
+    "https://docs.google.com/forms/d/e/1FAIpQLSc2i0TIpbqTaiAs5YmnRqgrSQODHwQTzHpS7gi0fXpJikyB1A/viewform?usp=publish-editor",
+  mailingList:
+    "https://docs.google.com/forms/d/e/1FAIpQLScf6d8xhdLYJaJJCgZCeJr9bgTfhX0dM5xV3OywhDGA4yupfA/viewform?usp=sharing",
+  contactEmail: "nufuturedev@gmail.com",
 } as const;

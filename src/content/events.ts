@@ -5,7 +5,7 @@ export const events: FutureDevEvent[] = [
   {
     id: "fall-kickoff-2026",
     title: "Fall Kick-Off",
-    description: "Meet the FutureDev team, hear about this semester's programs, and find your mentor group.",
+    description: "Meet the FutureDev team, hear about this quarter's programs, and find your mentor group.",
     date: "2026-09-28",
     time: "6:00 PM",
     location: "Tech M164",

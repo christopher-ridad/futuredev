@@ -11,11 +11,14 @@ export function JoinCtaSection() {
           align="center"
           eyebrow="Community"
           title="Ready to start building?"
-          subtitle="Conversations, questions, and collaboration happen in our Discord — that's where the community lives day to day, with mentorship pairing experienced members and mentees for guidance throughout the semester."
+          subtitle="Conversations, questions, and collaboration happen in our Discord — that's where the community lives day to day, with mentorship pairing experienced members and mentees for guidance throughout the quarter."
         />
         <div className="flex flex-wrap justify-center gap-4">
           <Button href={externalLinks.discord} external>
             Join our Discord
+          </Button>
+          <Button href={externalLinks.mailingList} variant="secondary" external>
+            Join our mailing list
           </Button>
           <Button href={externalLinks.instagram} variant="secondary" external>
             Follow on Instagram
