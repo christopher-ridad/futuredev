@@ -35,13 +35,6 @@ export function LearningPathStage({ stage, stageNumber, isLast }: LearningPathSt
           ))}
         </div>
 
-        {stage.workshops.length > 0 && (
-          <p className="text-sm text-foreground-muted">
-            <span className="font-medium text-foreground">FutureDev workshop: </span>
-            {stage.workshops.join(", ")}
-          </p>
-        )}
-
         <ul className="flex flex-col gap-1 text-sm">
           {stage.resources.map((resource) => (
             <li key={resource.url}>

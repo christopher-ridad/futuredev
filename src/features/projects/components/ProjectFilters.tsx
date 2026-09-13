@@ -2,7 +2,7 @@ import type { ProjectCategoryFilter } from "@/features/projects/projectFilters";
 import { projectCategoryLabels } from "@/features/projects/projectCategoryLabels";
 import type { ProjectCategory } from "@/types";
 
-const categories: ProjectCategory[] = ["web", "mobile", "game", "ai"];
+const categories: ProjectCategory[] = ["web", "mobile", "game", "technical"];
 
 type ProjectFiltersProps = {
   selectedCategory: ProjectCategoryFilter;

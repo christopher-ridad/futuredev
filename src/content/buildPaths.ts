@@ -1,91 +1,99 @@
 import type { BuildPath } from "@/types";
 
+// Content grounded in FutureDev's actual mentor-group curricula (Web Dev, Mobile Dev,
+// Game Dev, and LeetCode/Recruitment Foundations outlines).
 export const buildPaths: BuildPath[] = [
   {
     id: "web",
-    title: "A Website",
+    title: "Web Development",
     emoji: "🌐",
     description:
-      "Learn to build sites and web apps that run in the browser, from a static page to a full-stack project.",
-    skills: ["HTML & CSS", "JavaScript fundamentals", "Responsive layout", "Working with APIs"],
-    technologies: ["HTML/CSS", "JavaScript", "React", "Next.js"],
-    workshops: ["Intro to Web Dev Workshop", "Building with React"],
+      "Learn to build sites and web apps that run in the browser, from a static personal page to a full-stack project with a real backend.",
+    skills: [
+      "HTML & CSS",
+      "Flexbox layout & responsive design",
+      "JavaScript fundamentals & the DOM",
+      "React components, props & state",
+      "Fetching data from APIs",
+      "Git & GitHub workflow",
+    ],
+    technologies: ["HTML/CSS", "JavaScript", "React", "Vite", "Git/GitHub"],
     resources: [
       { label: "MDN Web Docs", url: "https://developer.mozilla.org" },
-      { label: "The Odin Project", url: "https://www.theodinproject.com" },
       { label: "React documentation", url: "https://react.dev" },
+      { label: "Vite documentation", url: "https://vite.dev" },
     ],
     projectIdeas: [
       "A personal portfolio site",
-      "A campus club or event finder",
-      "A shared to-do list for study groups",
+      "A calendar or to-do list app",
+      "A study tool like flashcards",
     ],
-    relatedProjectIds: ["campus-eats"],
-    recommendedStartingPoint:
-      "Start with HTML & CSS, then build a personal portfolio site to practice what you've learned.",
+    relatedProjectIds: ["personal-portfolio-site", "campus-clubs"],
   },
   {
     id: "mobile",
-    title: "A Mobile App",
+    title: "Mobile Development",
     emoji: "📱",
     description:
-      "Build native-feeling apps for iOS and Android using modern cross-platform tooling.",
-    skills: ["UI fundamentals", "Navigation & state", "Working with device APIs", "Shipping builds"],
-    technologies: ["React Native", "Expo", "Swift"],
-    workshops: ["Building Your First App", "From Prototype to App Store"],
+      "Build a real mobile app for iOS and Android with React Native, from your first screen to an app you can install on your phone.",
+    skills: [
+      "React Native fundamentals",
+      "Building UIs with reusable components",
+      "Navigation between screens",
+      "Managing state & user input",
+      "Persisting data locally",
+    ],
+    technologies: ["React Native", "Expo", "TypeScript"],
     resources: [
       { label: "React Native documentation", url: "https://reactnative.dev" },
       { label: "Expo documentation", url: "https://docs.expo.dev" },
     ],
-    projectIdeas: [
-      "A habit or workout tracker",
-      "A study-group matching app",
-      "A campus events app with reminders",
-    ],
-    relatedProjectIds: ["studybuddy"],
-    recommendedStartingPoint:
-      "Get comfortable with JavaScript first, then follow the Expo docs to build and run your first app.",
+    projectIdeas: ["A personal journal", "A habit tracker", "A recipe book", "An expense tracker"],
+    relatedProjectIds: ["habit-tracker"],
   },
   {
     id: "game",
-    title: "A Game",
+    title: "Game Development",
     emoji: "🎮",
-    description: "Design and build playable games, from a small prototype to a finished game jam entry.",
-    skills: ["Game loops & physics", "Sprite/asset workflows", "Level design", "Player input"],
-    technologies: ["Unity", "C#", "Godot"],
-    workshops: ["Intro to Game Dev with Unity", "Game Jam Prep Night"],
+    description:
+      "Design and build playable games in Unity, from your first GameObject to a finished, playtested prototype.",
+    skills: [
+      "GameObjects, Components & Prefabs",
+      "Input, camera & physics",
+      "Animation & state machines",
+      "Game design & rapid prototyping",
+      "Playtesting & iterating on feedback",
+    ],
+    technologies: ["Unity", "C#"],
     resources: [
       { label: "Unity Learn", url: "https://learn.unity.com" },
-      { label: "Godot documentation", url: "https://docs.godotengine.org" },
+      { label: "LearnOpenGL (for graphics-curious devs)", url: "https://learnopengl.com" },
     ],
     projectIdeas: [
+      "A small prototype built around one core mechanic",
       "A short platformer level",
       "A top-down dungeon crawler",
-      "A local two-player party game",
     ],
-    relatedProjectIds: ["pixel-dungeon-crawl"],
-    recommendedStartingPoint:
-      "Work through Unity Learn's beginner path, then build a short platformer level to practice.",
+    relatedProjectIds: ["loot-table-tool", "glyphrender"],
   },
   {
-    id: "ai",
-    title: "Something with AI",
-    emoji: "🤖",
-    description: "Explore machine learning and applied AI by building projects with real models and APIs.",
-    skills: ["Python fundamentals", "Working with data", "Using ML/LLM APIs", "Model basics"],
-    technologies: ["Python", "PyTorch", "OpenAI API"],
-    workshops: ["Intro to Python for AI", "Building with LLM APIs"],
-    resources: [
-      { label: "Google's Machine Learning Crash Course", url: "https://developers.google.com/machine-learning/crash-course" },
-      { label: "OpenAI API documentation", url: "https://platform.openai.com/docs" },
+    id: "technical",
+    title: "Technical Development",
+    emoji: "💻",
+    description:
+      "Sharpen the core engineering skills behind everything else: data structures, algorithms, and how to talk about your work in interviews.",
+    skills: [
+      "Arrays, strings, sets & hashing",
+      "Two pointers, sliding window & binary search",
+      "Linked lists, stacks, queues, trees & graphs",
+      "Behavioral interview storytelling (STAR method)",
     ],
+    technologies: ["Python", "C++"],
+    resources: [{ label: "LeetCode", url: "https://leetcode.com" }],
     projectIdeas: [
-      "A study notes summarizer",
-      "A chatbot for a specific topic you know well",
-      "An image classifier for a hobby project",
+      "A tracker for LeetCode problems solved by pattern",
+      "A mock interview with a friend using the STAR method",
     ],
-    relatedProjectIds: ["notesum"],
-    recommendedStartingPoint:
-      "Get comfortable with Python, then try building a simple chatbot with the OpenAI API.",
+    relatedProjectIds: [],
   },
 ];

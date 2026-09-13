@@ -1,41 +1,46 @@
 import type { Project } from "@/types";
 
-// Placeholder projects — replace with real member submissions.
+// Projects grounded in real deliverables from FutureDev mentor curricula
+// (not real member submissions — replace with actual projects as they're built).
 export const projects: Project[] = [
   {
-    id: "campus-eats",
-    name: "Campus Eats",
+    id: "personal-portfolio-site",
+    name: "Personal Portfolio Site",
     description:
-      "A web app for browsing dining hall menus and crowd-sourced wait times across campus.",
+      "The first project every Web Dev mentee builds — a personal site used to practice HTML, CSS, and later JavaScript and React.",
     category: "web",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
-    links: { repo: "https://github.com" },
+    technologies: ["HTML/CSS", "JavaScript"],
   },
   {
-    id: "studybuddy",
-    name: "StudyBuddy",
+    id: "campus-clubs",
+    name: "Campus Clubs",
     description:
-      "A mobile app that matches students into study groups based on shared classes and availability.",
+      "A club messaging app for campus organizations, inspired by wanting a better GroupMe for clubs — a capstone from FutureDev's Advanced App Development track, built as a monorepo with a web and mobile app sharing the same backend.",
+    category: "web",
+    technologies: ["Next.js", "Expo", "Turborepo", "TypeScript"],
+  },
+  {
+    id: "habit-tracker",
+    name: "Habit Tracker",
+    description:
+      "A React Native app for building and tracking daily habits — one of the real project options from FutureDev's Mobile Dev track.",
     category: "mobile",
-    technologies: ["React Native", "Expo", "Firebase"],
-    links: { repo: "https://github.com" },
+    technologies: ["React Native", "Expo", "AsyncStorage"],
   },
   {
-    id: "pixel-dungeon-crawl",
-    name: "Pixel Dungeon Crawl",
+    id: "loot-table-tool",
+    name: "Custom Loot Table Tool",
     description:
-      "A 2D roguelike built during a game jam, with procedurally generated dungeon layouts.",
+      "A custom Unity Editor tool built with ScriptableObjects, letting designers configure loot probabilities without touching code — from FutureDev's Game Dev mentorship.",
     category: "game",
     technologies: ["Unity", "C#"],
-    links: { demo: "https://itch.io" },
   },
   {
-    id: "notesum",
-    name: "NoteSum",
+    id: "glyphrender",
+    name: "GlyphRender",
     description:
-      "An AI-powered tool that summarizes lecture notes and generates practice questions from them.",
-    category: "ai",
-    technologies: ["Python", "FastAPI", "OpenAI API"],
-    links: { repo: "https://github.com" },
+      "A small text-rendering engine built from scratch in OpenGL, using FreeType to turn font files into on-screen text — the capstone of FutureDev's text rendering course.",
+    category: "game",
+    technologies: ["C++", "OpenGL", "FreeType2"],
   },
 ];
