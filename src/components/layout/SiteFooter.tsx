@@ -3,9 +3,11 @@ import { externalLinks, mainNavLinks, siteConfig } from "@/constants/site";
 import { PageContainer } from "@/components/ui/PageContainer";
 
 const communityLinks = [
-  { label: "Discord", href: externalLinks.discord },
-  { label: "Instagram", href: externalLinks.instagram },
-  { label: "Linktree", href: externalLinks.linktree },
+  { label: "Discord", href: externalLinks.discord, external: true },
+  { label: "Instagram", href: externalLinks.instagram, external: true },
+  { label: "Mailing List", href: externalLinks.mailingList, external: true },
+  { label: "Linktree", href: externalLinks.linktree, external: true },
+  { label: "Contact", href: `mailto:${externalLinks.contactEmail}`, external: false },
 ];
 
 export function SiteFooter() {
@@ -47,8 +49,8 @@ export function SiteFooter() {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    target={link.external ? "_blank" : undefined}
+                    rel={link.external ? "noopener noreferrer" : undefined}
                     className="text-sm text-foreground-muted transition-colors hover:text-accent-green focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-green"
                   >
                     {link.label}
