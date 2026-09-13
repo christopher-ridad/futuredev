@@ -54,6 +54,12 @@ export type ArchivedMentor = {
   outlineUrl?: string;
 };
 
+export type TimelineStep = {
+  week: string;
+  title: string;
+  description: string;
+};
+
 export type TeamMember = {
   id: string;
   name: string;
