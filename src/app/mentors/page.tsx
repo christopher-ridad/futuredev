@@ -3,7 +3,9 @@ import { PageContainer } from "@/components/ui/PageContainer";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { EmptyState } from "@/components/ui/EmptyState";
 import { MentorArchiveList } from "@/features/mentors/components/MentorArchiveList";
+import { ApplicationTimeline } from "@/features/mentors/components/ApplicationTimeline";
 import { mentorArchive } from "@/content/mentors";
+import { applicationTimeline } from "@/content/timeline";
 
 export const metadata: Metadata = {
   title: "Mentors",
@@ -27,6 +29,15 @@ export default function MentorsPage() {
           title="Groups are being finalized"
           description="Mentor groups for this quarter haven't been set yet. Follow our Discord or Instagram for updates."
         />
+      </section>
+
+      <section className="flex flex-col gap-8">
+        <SectionHeading
+          eyebrow="How it works"
+          title="Application timeline"
+          subtitle="A general sense of how each quarter's matching process goes. Exact dates shift, but the sequence stays the same."
+        />
+        <ApplicationTimeline steps={applicationTimeline} />
       </section>
 
       <section className="flex flex-col gap-6">
