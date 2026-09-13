@@ -8,7 +8,7 @@ import { learningPaths } from "@/content/resources";
 export const metadata: Metadata = {
   title: "Resources",
   description:
-    "Structured, self-paced learning paths for web, mobile, game, and AI development — no account needed.",
+    "Structured, self-paced learning paths for web, mobile, and game development, plus core technical skills — no account needed.",
 };
 
 export default function ResourcesPage() {

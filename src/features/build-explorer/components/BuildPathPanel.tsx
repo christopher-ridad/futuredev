@@ -38,17 +38,6 @@ export function BuildPathPanel({ buildPath, relatedProjects }: BuildPathPanelPro
             ))}
           </div>
         </div>
-
-        <div>
-          <h3 className="mb-2 text-sm font-semibold uppercase tracking-widest text-foreground-muted">
-            FutureDev workshops
-          </h3>
-          <ul className="flex flex-col gap-1 text-sm text-foreground">
-            {buildPath.workshops.map((workshop) => (
-              <li key={workshop}>{workshop}</li>
-            ))}
-          </ul>
-        </div>
       </div>
 
       <div className="flex flex-col gap-6">

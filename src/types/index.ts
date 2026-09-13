@@ -1,11 +1,6 @@
-export type BuildCategory = "web" | "mobile" | "game" | "ai";
+export type BuildCategory = "web" | "mobile" | "game" | "technical";
 
 export type ProjectCategory = BuildCategory;
-
-export type ProjectLinks = {
-  demo?: string;
-  repo?: string;
-};
 
 export type Project = {
   id: string;
@@ -13,7 +8,6 @@ export type Project = {
   description: string;
   category: ProjectCategory;
   technologies: string[];
-  links?: ProjectLinks;
 };
 
 export type EventCategory =
@@ -47,11 +41,9 @@ export type BuildPath = {
   description: string;
   skills: string[];
   technologies: string[];
-  workshops: string[];
   resources: BuildPathResource[];
   projectIdeas: string[];
   relatedProjectIds: string[];
-  recommendedStartingPoint: string;
 };
 
 export type LearningStage = {
@@ -59,7 +51,6 @@ export type LearningStage = {
   description: string;
   skills: string[];
   resources: BuildPathResource[];
-  workshops: string[];
   practiceProjectIdeas: string[];
 };
 
@@ -68,4 +59,32 @@ export type LearningPath = {
   title: string;
   description: string;
   stages: LearningStage[];
+};
+
+export type TeamMember = {
+  id: string;
+  name: string;
+  role: string;
+  year: string;
+  program: string;
+  hometown: string;
+  funFact: string;
+  // Set once a real photo file is added under public/team/.
+  photo?: string;
+  // CSS object-position for the circular crop (e.g. "50% 20%"), tuned per photo
+  // so the face is centered instead of the geometric center of the image.
+  // Ignored when photoZoom is set (object-position is forced to center).
+  photoPosition?: string;
+  // Extra zoom (CSS scale factor) for full-body photos where the face is small.
+  photoZoom?: number;
+};
+
+export type FaqItem = {
+  question: string;
+  answer: string;
+};
+
+export type GalleryPhoto = {
+  src: string;
+  alt: string;
 };

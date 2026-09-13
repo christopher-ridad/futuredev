@@ -2,18 +2,20 @@ export const siteConfig = {
   name: "FutureDev",
   tagline: "Build the things you wish existed.",
   description:
-    "FutureDev is a student community where members learn web, mobile, game, and AI development by building real projects alongside other developers.",
+    "FutureDev is a Northwestern student community, founded in 2024, where members explore web development, mobile app creation, game production, and other tech skills by building real projects in small mentor-guided pods.",
   // Set NEXT_PUBLIC_SITE_URL in production (e.g. on Vercel) once the site has a real domain.
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
 } as const;
 
+// "Home" is kept here for the footer and sitemap, but SiteHeader filters it
+// out of the primary nav since the logo already links home.
 export const mainNavLinks = [
   { label: "Home", href: "/" },
-  { label: "Programs", href: "/programs" },
-  { label: "Projects", href: "/projects" },
-  { label: "Events", href: "/events" },
+  { label: "About", href: "/#about" },
+  { label: "Programs", href: "/#get-started" },
+  { label: "Team", href: "/#team" },
   { label: "Resources", href: "/resources" },
-  { label: "About", href: "/about" },
+  { label: "FAQ", href: "/#faq" },
 ] as const;
 
 export const externalLinks = {

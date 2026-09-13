@@ -2,7 +2,7 @@ import type { Project, ProjectCategory } from "@/types";
 
 export type ProjectCategoryFilter = "all" | ProjectCategory;
 
-const projectCategories: ProjectCategory[] = ["web", "mobile", "game", "ai"];
+const projectCategories: ProjectCategory[] = ["web", "mobile", "game", "technical"];
 
 export function filterProjectsByCategory(
   projects: Project[],

@@ -1,10 +1,9 @@
 import { Hero } from "@/components/sections/Hero";
-import { MissionSection } from "@/components/sections/MissionSection";
+import { AboutSection } from "@/components/sections/AboutSection";
 import { BuildExplorerSection } from "@/components/sections/BuildExplorerSection";
-import { ProgramsPreviewSection } from "@/components/sections/ProgramsPreviewSection";
-import { ProjectsPreviewSection } from "@/components/sections/ProjectsPreviewSection";
-import { EventsPreviewSection } from "@/components/sections/EventsPreviewSection";
-import { CommunitySection } from "@/components/sections/CommunitySection";
+import { MentorshipSection } from "@/components/sections/MentorshipSection";
+import { TeamSection } from "@/components/sections/TeamSection";
+import { FaqSection } from "@/components/sections/FaqSection";
 import { JoinCtaSection } from "@/components/sections/JoinCtaSection";
 
 const dividerClass = "border-t border-border";
@@ -14,22 +13,19 @@ export default function HomePage() {
     <>
       <Hero />
       <div className={dividerClass}>
-        <MissionSection />
+        <AboutSection />
       </div>
       <div className={dividerClass}>
         <BuildExplorerSection />
       </div>
       <div className={dividerClass}>
-        <ProgramsPreviewSection />
+        <MentorshipSection />
       </div>
       <div className={dividerClass}>
-        <ProjectsPreviewSection />
+        <TeamSection />
       </div>
       <div className={dividerClass}>
-        <EventsPreviewSection />
-      </div>
-      <div className={dividerClass}>
-        <CommunitySection />
+        <FaqSection />
       </div>
       <div className={dividerClass}>
         <JoinCtaSection />

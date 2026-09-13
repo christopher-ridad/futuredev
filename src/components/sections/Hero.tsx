@@ -16,8 +16,8 @@ export function Hero() {
         <Button href={externalLinks.discord} external>
           Join FutureDev
         </Button>
-        <Button href="/projects" variant="secondary">
-          Explore Projects
+        <Button href="/#get-started" variant="secondary">
+          Explore Programs
         </Button>
       </div>
     </PageContainer>

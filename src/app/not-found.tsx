@@ -9,13 +9,13 @@ export default function NotFound() {
         This page hasn&apos;t been built yet.
       </h1>
       <p className="max-w-xl text-foreground-muted">
-        The page you&apos;re looking for doesn&apos;t exist. Head back home, or explore what
-        FutureDev members have built.
+        The page you&apos;re looking for doesn&apos;t exist. Head back home, or see what tracks
+        FutureDev offers.
       </p>
       <div className="flex flex-wrap gap-4">
         <Button href="/">Back home</Button>
-        <Button href="/projects" variant="secondary">
-          Explore Projects
+        <Button href="/#get-started" variant="secondary">
+          Explore Programs
         </Button>
       </div>
     </PageContainer>
