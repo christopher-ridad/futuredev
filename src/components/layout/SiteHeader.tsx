@@ -4,7 +4,11 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Button } from "@/components/ui/Button";
-import { mainNavLinks, siteConfig } from "@/constants/site";
+import { externalLinks, mainNavLinks, siteConfig } from "@/constants/site";
+
+// The logo already links home, so the primary nav skips the explicit "Home" entry
+// (the footer still shows it via the full mainNavLinks list).
+const headerNavLinks = mainNavLinks.filter((link) => link.href !== "/");
 
 export function SiteHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,9 +27,8 @@ export function SiteHeader() {
 
         <nav aria-label="Main" className="hidden md:block">
           <ul className="flex items-center gap-8">
-            {mainNavLinks.map((link) => {
-              const isActive =
-                link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
+            {headerNavLinks.map((link) => {
+              const isActive = pathname.startsWith(link.href);
               return (
                 <li key={link.href}>
                   <Link
@@ -44,7 +47,7 @@ export function SiteHeader() {
         </nav>
 
         <div className="hidden md:block">
-          <Button href="/about" variant="primary">
+          <Button href={externalLinks.discord} variant="primary" external>
             Join FutureDev
           </Button>
         </div>
@@ -81,9 +84,8 @@ export function SiteHeader() {
       {isMenuOpen && (
         <nav id="mobile-nav" aria-label="Mobile" className="border-t border-border md:hidden">
           <ul className="flex flex-col gap-1 px-4 py-4 sm:px-6">
-            {mainNavLinks.map((link) => {
-              const isActive =
-                link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
+            {headerNavLinks.map((link) => {
+              const isActive = pathname.startsWith(link.href);
               return (
                 <li key={link.href}>
                   <Link
@@ -100,7 +102,7 @@ export function SiteHeader() {
               );
             })}
             <li className="pt-2">
-              <Button href="/about" variant="primary" className="w-full">
+              <Button href={externalLinks.discord} variant="primary" className="w-full" external>
                 Join FutureDev
               </Button>
             </li>
